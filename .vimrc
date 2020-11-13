@@ -39,7 +39,7 @@ call plug#begin()
 
 
 "	---------- Code Display ----------
-  Plug 'ap/vim-css-color'
+  "Plug 'ap/vim-css-color'
 
 
 "	---------- Interface ----------
@@ -109,10 +109,19 @@ let g:airline_powerline_fonts = 1
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
+  \ 'coc-discord-rpc',
+  \
   \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-java',
+  \ 'coc-python',
+  \ 'coc-clangd',
+  \ 'coc-css',
+  \ 'coc-flutter',
+  \
+  \ 'coc-highlight',
   \ 'coc-eslint',
   \ 'coc-prettier',
-  \ 'coc-json',
   \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile  " auto format w/ prettier on save

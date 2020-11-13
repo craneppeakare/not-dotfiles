@@ -5,5 +5,7 @@
     "typescriptreact",
     "json",
     "javascript.tsx"
-  ]
+  ],
+  "rpc.lowerDetailsEditing": "On line: {currentline} / {totallines}",
+  "rpc.smallImage": "Vim"
 }
