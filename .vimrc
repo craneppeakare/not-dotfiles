@@ -39,7 +39,7 @@ call plug#begin()
 
 
 "	---------- Code Display ----------
-  "Plug 'ap/vim-css-color'
+  Plug 'ap/vim-css-color'
 
 
 "	---------- Interface ----------
