@@ -13,6 +13,7 @@ alias svi='sudo nvim'
 alias lt='ls -sSh1F --color=auto'
 alias cp="cp -i"  # confirm before overwriting something
 alias df='df -h'  # human-readable sizes
+alias du='du -h --max-depth=1 --apparent-size'
 alias free='free -m'  # human-readable sizes
 alias more=less
 
