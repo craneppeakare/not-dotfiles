@@ -2,18 +2,28 @@
 # ============== Custom Aliases ============== #
 
 alias mtrix='unimatrix -s 90 -l ksn'
-alias resetcolors='konsoleprofile colors=Andreana'
-alias lt='ls -sSh1F'
-# Temporarily switch colorschemes when opening vim
-vim() {
-  konsoleprofile colors=Moe-Dark-NOPADDING
-  command vim "$@"
-  resetcolors
-}
 
+# Prefer nvim
+alias vim='nvim'
+alias vi='nvim'
+alias svim='sudo nvim'
+alias svi='sudo nvim'
+
+# Common commands
+alias lt='ls -sSh1F --color=auto'
 alias cp="cp -i"  # confirm before overwriting something
 alias df='df -h'  # human-readable sizes
 alias free='free -m'  # human-readable sizes
+alias more=less
+
+# Make parents if needed + verbose stdout
+alias mkdir='mkdir -pv'
+
+# Easier cd backing
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
 
 # ============== Other Aliases ============== #
 
@@ -68,4 +78,3 @@ ex ()
   fi
 }
 
-alias more=less

@@ -1,0 +1,87 @@
+
+!! URxvt Appearance
+URxvt.font:xft:Source Code Pro:size=10,xft:Unifont:size=10
+! URxvt.boldFont: -*-rissole-*
+! URxvt.italicFont: -*-rissole-*
+! URxvt.boldItalicfont: -*-rissole-*
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+URxvt.iso14755: false
+
+!! Colorscheme
+URxvt*foreground:   #b8b5ba
+URxvt*background:   [100]#0f0e0f
+URxvt*cursorColor:  #b8b5ba
+URxvt*borderColor:  [100]#0f0e0f
+
+! ! special
+*foreground:        #b8b5ba
+*background:        #0f0e0f
+*.foreground:       #b8b5ba
+*.background:       #0f0e0f
+
+
+! Colors 0-15.
+*.color0: #0f0e0f
+*color0:  #0f0e0f
+*.color1: #53396F
+*color1:  #53396F
+*.color2: #4C4854
+*color2:  #4C4854
+*.color3: #665973
+*color3:  #665973
+*.color4: #5E3F81
+*color4:  #5E3F81
+*.color5: #715C89
+*color5:  #715C89
+*.color6: #714B9A
+*color6:  #714B9A
+*.color7: #b8b5ba
+*color7:  #b8b5ba
+*.color8: #807e82
+*color8:  #807e82
+*.color9: #53396F
+*color9:  #53396F
+*.color10: #4C4854
+*color10:  #4C4854
+*.color11: #665973
+*color11:  #665973
+*.color12: #5E3F81
+*color12:  #5E3F81
+*.color13: #715C89
+*color13:  #715C89
+*.color14: #714B9A
+*color14:  #714B9A
+*.color15: #b8b5ba
+*color15:  #b8b5ba
+
+
+
+! open urls with right click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! disable scrollback buffer for the secondary screen
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+URxct.font: 9x15
+
+

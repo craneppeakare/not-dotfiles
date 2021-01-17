@@ -7,9 +7,11 @@ if [ -e $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
 
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+bind 'set bell-style none'
 
 # Change the window title of X terminals
 case ${TERM} in

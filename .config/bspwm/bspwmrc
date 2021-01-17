@@ -1,0 +1,37 @@
+#! /bin/sh
+
+# source colors from wal
+. ~/.cache/wal/colors.sh
+
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color5"
+
+baspc config presel_feedback_color "$color1"
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d 1 2 3 4 5
+
+# all windows on desktop 3 are floating
+FLOATING_DESKTOP_ID=$(bspc query -D -d '^4')
+bspc subscribe node_manage | while read -a msg ; do
+  desk_id=${msg[2]}
+  wid=${msg[3]}
+  [ "$FLOATING_DESKTOP_ID" = "$desk_id" ] && bspc node "$wid" -t floating
+done
+
+bspc config border_width         1
+bspc config window_gap          16
+bspc config top_padding         24
+
+bspc config split_ratio          0.6
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp state=floating follow=on
+bspc rule -a firefox desktop='^1'
+bspc rule -a discord dektop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
