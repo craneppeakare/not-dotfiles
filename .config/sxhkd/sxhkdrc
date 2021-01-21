@@ -10,8 +10,12 @@ ctrl + alt + t
 	kitty
 
 # program launcher
-ctrl + r
+ctrl + alt + r
 	dmenu_run
+
+# Screenshot
+Print
+  bash ~/Scripts/ss-clipboard
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -25,7 +29,7 @@ ctrl + {1-5}
   bspc desktop -f {1, 2, 3, 4, 5}
 
 # quit/restart bspwm
-ctrl + alt + {q,r}
+super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
