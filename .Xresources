@@ -1,37 +1,42 @@
 
 !! URxvt Appearance
-URxvt.font:xft:Source Code Pro:size=10,xft:Unifont:size=10
+*.font:xft:Source Code Pro:size=10,xft:IPAGothic:size=10,xft:Unifont:size=10
 ! URxvt.boldFont: -*-rissole-*
 ! URxvt.italicFont: -*-rissole-*
 ! URxvt.boldItalicfont: -*-rissole-*
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.internalBorder: 24
+
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 32
+URxvt.urgentOnBell: false
 URxvt.iso14755: false
+
+URxvt.transparent: true
+URxvt.shading: 20
+URxvt.depth: 1
+URxvt*blurRadius: 8
 
 !! Colorscheme
 URxvt*foreground:   #b8b5ba
-URxvt*background:   [100]#0f0e0f
+URxvt*background:   [95]#222222
 URxvt*cursorColor:  #b8b5ba
-URxvt*borderColor:  [100]#0f0e0f
+URxvt*borderColor:  [95]#222222
 
 ! ! special
 *foreground:        #b8b5ba
-*background:        #0f0e0f
+*background:        [95]#222222
 *.foreground:       #b8b5ba
-*.background:       #0f0e0f
+*.background:       [95]#222222
 
 
 ! Colors 0-15.
-*.color0: #0f0e0f
-*color0:  #0f0e0f
+*.color0: #222222
+*color0:  #222222
 *.color1: #53396F
 *color1:  #53396F
 *.color2: #4C4854
