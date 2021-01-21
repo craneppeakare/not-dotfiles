@@ -12,9 +12,9 @@ set incsearch     " search as characters are entered
 set hlsearch      " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
 
-set foldenable    " enable folding
-set foldlevelstart=10
-set foldnestmax=10
+" set foldenable    " enable folding
+" set foldlevelstart=10
+" set foldnestmax=10
 
 set laststatus=2
 syntax on
@@ -65,7 +65,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " coc plugins
 
-" nerdtree
+"  nerdtree
 let g:NERDTreeWinSize=20
 nnoremap <leader><tab> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
