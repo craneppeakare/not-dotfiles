@@ -3,6 +3,9 @@
 
 alias mtrix='unimatrix -s 90 -l ksn'
 
+# Small neofetch
+alias smallneo='neofetch --ascii_distro arch_small --ascii_colors 2 2 --disable title underline model uptime resolution de wm_theme cpu gpu memory cols'
+
 # Prefer nvim
 alias vim='nvim'
 alias vi='nvim'
