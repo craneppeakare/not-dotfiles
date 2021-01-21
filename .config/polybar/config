@@ -60,9 +60,10 @@ module-margin-left = 0
 module-margin-right = 2
 
 ;font-0 = fixed:pixelsize=10;1
-font-0 = "Source Code Pro:pixelsize=10;1"
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = "Source Code Pro:pixelsize=10;0"
+font-1 = "IPAGothic:pixelsize=10;0"
+font-2 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-3 = siji:pixelsize=10;1
 
 modules-left = powermenu bspwm
 modules-center = xwindow
@@ -73,7 +74,7 @@ tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
