@@ -9,7 +9,7 @@
 - **Compositor**                   : Picom
 - **Bar**                          : Polybar (Customized from [adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes#cuts))
 
-### Screens:
+### Screens (as of 1-23-2021):
 
 <img src=https://github.com/craneppeakare/not-dotfiles/blob/arch-PC/Pictures/Screenshots/1611390965.png>
 Applications shown above: neofetch, htop, ytop, dunst
