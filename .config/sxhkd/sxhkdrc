@@ -17,6 +17,9 @@ ctrl + alt + r
 Print
   bash ~/Scripts/ss-clipboard
 
+shift + Print
+  shotgun
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -25,8 +28,8 @@ super + Escape
 # bspwm hotkeys
 #
 
-ctrl + {1-5}
-  bspc desktop -f {1, 2, 3, 4, 5}
+ctrl + {1-6}
+  bspc desktop -f {1, 2, 3, 4, 5, 6}
 
 # quit/restart bspwm
 super + alt + {q,r}

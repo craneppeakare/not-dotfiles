@@ -40,7 +40,7 @@ export XMODIFIERS=@im=fcitx
 xsetroot -cursor_name left_ptr
 ~/.fehbg &
 picom --experimental-backends &
-~/.config/polybar/launch.sh
+~/.config/polybar/launch.sh --cuts
 fcitx -d &
 wal -R
 exec bspwm
