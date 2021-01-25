@@ -125,6 +125,7 @@ let g:coc_global_extensions = [
   \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile  " auto format w/ prettier on save
+set pyxversion=3
 
 " ======================== COC.NVIM DEFAULT CONFIGS =========================
 " TextEdit might fail if hidden is not set.
