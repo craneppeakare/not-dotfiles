@@ -1,5 +1,6 @@
 #!/bin/bash
+status=$(playerctl --player=spotifyd status)
 artUrl=$(playerctl --player=spotifyd metadata --format "{{mpris:artUrl}}")
 curl -o "${HOME}/Scripts/songArt.png" $artUrl
 song=$(playerctl --player=spotifyd metadata --format "Title: {{ title }}\nArtist: {{ artist }}\nAlbum: {{ album }}")
-notify-send "Spotify" "$song" --icon="${HOME}/Scripts/songArt.png"
+notify-send "Spotify ($status)" "$song" --icon="${HOME}/Scripts/songArt.png"

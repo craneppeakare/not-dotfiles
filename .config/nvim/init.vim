@@ -1,16 +1,19 @@
 
 set backspace=2
+set incsearch
 
-
+" Tab settings (1 tab = 2 spaces)
 set tabstop=2 shiftwidth=2 expandtab
 
-" --------- UI Config --------- "
 set number relativenumber
-set showmatch
+set showmatch     " Show matching brackets
+set mat=2         " Speed of blinking when matching brackets
 
 set incsearch     " search as characters are entered
 set hlsearch      " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
+
+set lazyredraw    " don't redraw when executing macros
 
 " set foldenable    " enable folding
 " set foldlevelstart=10
@@ -18,6 +21,28 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 set laststatus=2
 syntax on
+
+" Smart move between panes
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+
+" Move between visible lines (Useful for line wrapping)
+" noremap <silent> k gk
+" noremap <silent> j gj
+
+" Use linux clipboard register when yanking/pasting
+noremap <leader>y "+y
+noremap <leader>p "+p
+
+" Move lines up/down
+" nnoremap <S-j> :m .+1<CR>==
+" nnoremap <S-k> :m .-2<CR>==  " Doesn't work for some reason
+" inoremap <S-j> <Esc>:m .+1<CR>==gi
+" inoremap <S-k> <Esc>:m .-2<CR>==gi
+" vnoremap <S-j> :m '>+1<CR>gv=gv
+" vnoremap <S-k> :m '<-2<CR>gv=gv
 
 " ========== EXTRA PLUGINS ========== "
 call plug#begin()

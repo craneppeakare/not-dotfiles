@@ -15,6 +15,7 @@ alias svi='sudo nvim'
 # Common commands
 alias lt='ls -sSh1F --color=auto'
 alias cp="cp -i"  # confirm before overwriting something
+alias mv="mv -i"  # confirm before overwriting something
 alias df='df -h'  # human-readable sizes
 alias du='du -h --max-depth=1 --apparent-size'
 alias free='free -m'  # human-readable sizes
@@ -22,6 +23,9 @@ alias more=less
 
 # Make parents if needed + verbose stdout
 alias mkdir='mkdir -pv'
+
+# Create packages list for pacman
+alias genpkgs='pacman -Qqe > packages.txt'
 
 # Easier cd backing
 alias ..='cd ..'
@@ -66,6 +70,7 @@ ex ()
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xf $1    ;;
       *.bz2)       bunzip2 $1   ;;
       *.rar)       unrar x $1     ;;
       *.gz)        gunzip $1    ;;
