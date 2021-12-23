@@ -6,6 +6,8 @@
     "json",
     "javascript.tsx"
   ],
-  "rpc.lowerDetailsEditing": "On line: {currentline} / {totallines}",
-  "rpc.smallImage": "Vim"
+  // "eslint.filetypes": ["javascript, javascriptreact", "typescript"],
+  "rpc.lowerDetailsEditing": "On line: {current_line} / {total_lines}",
+  "rpc.smallImage": "Vim",
+  "clangd.path": "/home/pancake/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
 }

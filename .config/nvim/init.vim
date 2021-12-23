@@ -60,6 +60,7 @@ call plug#begin()
 "	---------- Completion ----------
   Plug 'neoclide/coc.nvim'
   Plug 'mattn/emmet-vim'
+  Plug 'rust-lang/rust.vim'
   "Plug 'vim-scripts/OmniCppComplete'
 
 
