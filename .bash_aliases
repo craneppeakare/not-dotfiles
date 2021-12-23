@@ -33,6 +33,10 @@ alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 
+# clipboard utilities
+alias setclip='xclip -selection c'
+alias getclip='xclip -selection c -o'
+
 # ============== Other Aliases ============== #
 
 colors() {

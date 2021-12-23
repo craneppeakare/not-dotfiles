@@ -37,6 +37,7 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
+xrandr --auto
 xsetroot -cursor_name left_ptr
 ~/.fehbg &
 picom --experimental-backends &
