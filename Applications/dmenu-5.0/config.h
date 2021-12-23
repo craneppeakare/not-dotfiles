@@ -4,6 +4,7 @@
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 static int centered = 1;                    /* -c option; centers dmenu on screen */
 static int min_width = 600;                    /* minimum width when centered */
+static const unsigned int alpha = 0xe6;
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
   "Source Code Pro:size=10",
@@ -18,6 +19,13 @@ static const char *colors[SchemeLast][2] = {
  	[SchemeNormHighlight] = { "#714b9a", "#0f0e0f" },
 	[SchemeOut] = { "#b8b5ba", "#714b9a" },
 };
+
+static const unsigned int alphas[SchemeLast][2] = {
+	[SchemeNorm] = { OPAQUE, alpha },
+	[SchemeSel] = { OPAQUE, alpha },
+	[SchemeOut] = { OPAQUE, alpha },
+};
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 14;
 /* -h option; minimum height of a menu line */
