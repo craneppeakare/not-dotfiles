@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# PATH stuff
+export PATH=$PATH:$HOME/.local/bin
+
 # Load bash aliases
 if [ -e $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
@@ -94,3 +97,8 @@ export NVM_DIR="$HOME/.nvm"
 # ------------------------------------------------------------ #
 
 smallneo
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

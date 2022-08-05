@@ -12,6 +12,9 @@ alias vi='nvim'
 alias svim='sudo nvim'
 alias svi='sudo nvim'
 
+# ghidra fix
+alias ghidra='_JAVA_AWT_WM_NONREPARENTING=1 ghidra'
+
 # Common commands
 alias lt='ls -sSh1F --color=auto'
 alias cp="cp -i"  # confirm before overwriting something
@@ -20,6 +23,8 @@ alias df='df -h'  # human-readable sizes
 alias du='du -h --max-depth=1 --apparent-size'
 alias free='free -m'  # human-readable sizes
 alias more=less
+
+alias yt-dl='youtube-dl'
 
 # Make parents if needed + verbose stdout
 alias mkdir='mkdir -pv'
