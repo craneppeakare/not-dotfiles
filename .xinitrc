@@ -39,9 +39,14 @@ export XMODIFIERS=@im=fcitx
 
 xrandr --auto
 xsetroot -cursor_name left_ptr
+xset r rate 130 100
 ~/.fehbg &
-picom --experimental-backends &
-~/.config/polybar/launch.sh --cuts
+picom --backend glx --glx-no-stencil &
+~/.config/polybar/cuts/launch.sh &
 fcitx -d &
 wal -R
+
+firefox &
+discord &
+
 exec bspwm
