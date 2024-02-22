@@ -4,6 +4,7 @@
 
 # PATH stuff
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Load bash aliases
 if [ -e $HOME/.bash_aliases ]; then
