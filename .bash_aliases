@@ -25,6 +25,8 @@ alias free='free -m'  # human-readable sizes
 alias more=less
 
 alias yt-dl='youtube-dl'
+alias yt-mp3='youtube-dl -x --audio-format mp3 --no-playlist --embed-thumbnail -f bestaudio'
+alias feh='feh -.d -S filename'
 
 # Make parents if needed + verbose stdout
 alias mkdir='mkdir -pv'
