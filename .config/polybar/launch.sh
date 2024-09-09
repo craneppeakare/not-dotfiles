@@ -11,7 +11,10 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
-	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+	if [[ "$style" == "hack" ]]; then
+		polybar -q primary -c "$dir/$style/config.ini" &
+		polybar -q secondary -c "$dir/$style/config.ini" &
+	if [[ "$style" == "cuts" ]]; then
 		polybar -q top -c "$dir/$style/config.ini" &
 		# polybar -q bottom -c "$dir/$style/config.ini" &
 	elif [[ "$style" == "pwidgets" ]]; then

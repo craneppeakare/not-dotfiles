@@ -37,10 +37,11 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-xrandr --auto
+# xrandr --auto
+~/.screenlayout/default.sh  # use settings from arandr instead
 xsetroot -cursor_name left_ptr
 xset r rate 130 100
-~/.fehbg &
+~/.fehbg --bg-fill &
 picom --backend glx --glx-no-stencil &
 ~/.config/polybar/cuts/launch.sh &
 fcitx -d &
