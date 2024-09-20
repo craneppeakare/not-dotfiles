@@ -249,26 +249,33 @@ local plugins = {
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "tsserver", "cssls", "clangd", "rust_analyzer" },
+      })
+      require("mason-lspconfig").setup_handlers({
+        -- The first entry (without a key) will be the default handler
+        -- and will be called for each installed server that doesn't have
+        -- a dedicated handler.
+        function(server_name) -- default handler (optional)
+          require("lspconfig")[server_name].setup({ capabilities = capabilities })
+        end,
+        -- Next, you can provide a dedicated handler for specific servers.
+        -- For example, a handler override for the `rust_analyzer`:
+        ["rust_analyzer"] = function()
+          require("lspconfig").rust_analyzer.setup({
+            settings = {
+              ["rust-analyzer"] = {},
+            },
+            capabilities = capabilities,
+          })
+        end,
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.tsserver.setup({ capabilities = capabilities })
-      lspconfig.cssls.setup({ capabilities = capabilities })
-      lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.rust_analyzer.setup({
-        settings = {
-          ["rust-analyzer"] = {},
-        },
-        capabilities = capabilities,
-      })
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp", { clear = true }),
         callback = function(args)
@@ -318,12 +325,14 @@ local plugins = {
     },
     config = function()
       local ls = require("luasnip")
+      --[[
       vim.keymap.set({ "i", "s" }, "<S-j>", function()
         ls.jump(1)
       end, { silent = true })
       vim.keymap.set({ "i", "s" }, "<S-k>", function()
         ls.jump(-1)
       end, { silent = true })
+      --]]
     end,
   },
   {
