@@ -11,8 +11,8 @@ baspc config presel_feedback_color "$color1"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor HDMI-0 -d 1 2 3 4 5 6
-bspc monitor HDMI-1 -d 7 8 9 0
+bspc monitor HDMI-A-0 -d 1 2 3 4 5 6
+bspc monitor DisplayPort-0 -d 7 8 9 0
 
 # all windows on desktop 3 are floating
 FLOATING_DESKTOP_ID=$(bspc query -D -d '^4')
