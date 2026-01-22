@@ -24,8 +24,8 @@ alias du='du -h --max-depth=1 --apparent-size'
 alias free='free -m'  # human-readable sizes
 alias more=less
 
-alias yt-dl='youtube-dl'
-alias yt-mp3='youtube-dl -x --audio-format mp3 --no-playlist --embed-thumbnail -f bestaudio'
+alias yt-dl='yt-dlp'
+alias yt-mp3='yt-dlp -x --audio-format mp3 --no-playlist --embed-thumbnail -f bestaudio'
 alias feh='feh -.d -S filename'
 
 # Make parents if needed + verbose stdout
@@ -43,6 +43,10 @@ alias .4='cd ../../../..'
 # clipboard utilities
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection c -o'
+
+# ============== Flatpak Aliases ============== #
+
+alias roblox='flatpak run org.vinegarhq.Sober'
 
 # ============== Other Aliases ============== #
 
@@ -73,8 +77,8 @@ colors() {
 	done
 }
 
-# # ex - archive extractor
-# # usage: ex <file>
+# ex - archive extractor
+# usage: ex <file>
 ex ()
 {
   if [ -f $1 ] ; then
@@ -97,4 +101,3 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
