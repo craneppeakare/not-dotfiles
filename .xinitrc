@@ -47,7 +47,8 @@ picom --backend glx --glx-no-stencil &
 fcitx -d &
 wal -R
 
-firefox &
+# firefox & # No longer safe due to ToS changes regarding data 28/02/25
+brave --password-store=basic &
 discord &
 
 exec bspwm
